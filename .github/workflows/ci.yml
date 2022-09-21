@@ -54,3 +54,4 @@ jobs:
           user-email: koss199710@gmail.com 
           commit-message: New reports added
           target-branch: main
+          
