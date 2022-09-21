@@ -1,5 +1,7 @@
-Playwright-tests-allure# 
+Playwright-tests-allure#
+____
 Playwright-tests-allure Automation with allure reports
+____
 
 This Framework contains sample code for # Playwright-tests-Allure Automation-Framework
 Page Object Model
@@ -20,6 +22,7 @@ Page Object Model
 
 
 - Allure report integration
+____
 
 Directory Structure 
 
