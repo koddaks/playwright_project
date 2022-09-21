@@ -4,7 +4,9 @@ Playwright-tests-allure Automation with allure reports
 This Framework contains sample code for # Playwright-tests-Allure Automation-Framework
 Page Object Model
 
-Reading test data from json file:
+- Reading test data from json file.
+
+- Checks the following test cases:
 
 #1 Sign up scenario with valid credentials
 
@@ -16,7 +18,8 @@ Reading test data from json file:
 
 #5 Site search
 
-Allure report integration
+
+- Allure report integration
 
 Directory Structure 
 
