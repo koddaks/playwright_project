@@ -1,0 +1,56 @@
+name: Main Action
+on:
+  push:
+    branches: [master]
+jobs:
+  redmine-tests:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.16.0'
+      - run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Install Allure comandline # Without installing allure comandline, pipeline trows error.
+        run: npm install allure-commandline --save-dev # I couldn't find how add this to the package-lock, so here's what we have.
+      - name: run test
+        run: npm run test 
+      - name: Copy History
+        if: always()
+        run: cp -r ./docs/history/ ./allure-results/history/
+      - name: Generate Report
+        if: always()
+        run: npm run allure:generate
+      - name: Upload Results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: allure-results
+          path: ./allure-results                  
+      - name: Publishing Allure artifact to Github Actions
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: allure-report
+          path: allure-report        
+      - name: Deploy report
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: always()
+        with:
+          branch: master
+          folder: allure-report
+          target-folder: docs
+      - name: Pushes docs to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        if: always()
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: docs
+          destination-github-username: 'koddaks'
+          destination-repository-name: 'playwrightproject'
+          user-email: koss199710@gmail.com 
+          commit-message: New reports added
+          target-branch: main
