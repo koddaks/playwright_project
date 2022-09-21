@@ -8,15 +8,15 @@ Page Object Model
 
 - Checks the following test cases:
 
-#1 Sign up scenario with valid credentials
+    #1 Sign up scenario with valid credentials
 
-#2 Sign Up user with already existing data
+    #2 Sign Up user with already existing data
 
-#3 Sign In Test with invalid data
+    #3 Sign In Test with invalid data
 
-#4 Password recovery with invalid email
+    #4 Password recovery with invalid email
 
-#5 Site search
+    #5 Site search
 
 
 - Allure report integration
