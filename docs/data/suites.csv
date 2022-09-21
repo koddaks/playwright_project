@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Sep 21 07:53:13 UTC 2022","Wed Sep 21 07:53:22 UTC 2022","8507","chromium","redmine.org.spec.js","redmine.org","","","Positive Test: Sign Up with valid credentionals /#1",""
+"passed","Wed Sep 21 07:53:22 UTC 2022","Wed Sep 21 07:53:36 UTC 2022","13937","chromium","redmine.org.spec.js","redmine.org","","","Negative Test: Sign Up user with already existing data /#2",""
+"passed","Wed Sep 21 07:53:41 UTC 2022","Wed Sep 21 07:53:47 UTC 2022","5904","chromium","redmine.org.spec.js","redmine.org","","","Negative Test: Password recovery with invalid email /#4",""
+"passed","Wed Sep 21 07:53:47 UTC 2022","Wed Sep 21 07:54:04 UTC 2022","16535","chromium","redmine.org.spec.js","redmine.org","","","Positive Test: Site search /#5",""
+"passed","Wed Sep 21 07:53:36 UTC 2022","Wed Sep 21 07:53:41 UTC 2022","5510","chromium","redmine.org.spec.js","redmine.org","","","Negative Test: Sign In Test with invalid data /#3",""
