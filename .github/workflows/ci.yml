@@ -16,7 +16,7 @@ jobs:
       - name: Install Allure comandline # Without installing allure comandline, pipeline trows error.
         run: npm install allure-commandline --save-dev # I couldn't find how add this to the package-lock, so here's what we have.
       - name: run test
-        run: npm run test 
+        run: npm run test
       - name: Copy History
         if: always()
         run: cp -r ./docs/history/ ./allure-results/history/
